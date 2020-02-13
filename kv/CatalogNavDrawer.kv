@@ -1,0 +1,20 @@
+<NavigationDrawerIconButton>
+    theme_text_color: "Custom"
+    #text_color: color_grey
+    divider: None
+
+<CatalogNavDrawer>:
+    drawer_logo: 'images/image.jpg'
+    drawer_logo_allow_stretch: False
+    drawer_logo_keep_ratio: True
+    NavigationDrawerIconButton:
+        text: "Facebok"
+        icon: 'view-list'
+        on_release:
+            app.root.ids.screen_manager.change_screen("screen1")
+    NavigationDrawerIconButton:
+        text: "Instagram"
+        icon: 'view-list'
+    NavigationDrawerIconButton:
+        text: "Twitter"
+        icon: 'view-list'

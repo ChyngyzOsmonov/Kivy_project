@@ -1,0 +1,21 @@
+#:include kv/CatalogNavDrawer.kv
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import colors kivymd.color_definitions.colors
+
+NavigationLayout:
+    id: nav_drawer
+    CatalogNavDrawer:
+    BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: "Каталог"
+            left_action_items: [['menu', lambda x: nav_drawer.toggle_nav_drawer()]]
+            #right_action_items: [['cart', lambda x: screen_manager.change_screen("screen2")]]            
+            md_bg_color: app.theme_cls.primary_color          
+        CatalogScreenManager:
+            id: screen_manager
+            Screen1:
+                name: "screen1"
+            Screen2:
+                name: "screen2"
+                id: screen2
